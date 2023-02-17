@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
+
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<h3>{{ post.subttitle }}</h3>
+<div class="detail-class">
+<strong>Created on : {{ post.created_on }}</strong>
+<p class="detail-p">{{ post.body}}</p>
+</div>
+{% endblock content %}
